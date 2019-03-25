@@ -4,10 +4,10 @@ public class Book {
     private String title, reasonToRead, id;
     private Boolean hasBeenRead;
 
-    public void createBook(String id, String title, String reaonToRead, Boolean hasBeenRead){
+    public Book (String id, String title, String reasonToRead, Boolean hasBeenRead){
         this.id = id;
         this.title = title;
-        this.reasonToRead = reaonToRead;
+        this.reasonToRead = reasonToRead;
         this.hasBeenRead = hasBeenRead;
 
     }
@@ -17,6 +17,7 @@ public class Book {
         title = bookStringList[1];
         reasonToRead = bookStringList[2];
         hasBeenRead = Boolean.parseBoolean(bookStringList[3]);
+
     }
     String toCsvString(){
         return String.format("%s,%s,%s,%b",id,title,reasonToRead,hasBeenRead);
